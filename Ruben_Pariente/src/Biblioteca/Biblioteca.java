@@ -6,7 +6,7 @@ import java.util.Objects;
  * Clase Biblioteca
  *
  * @author Alumno - Rubén Pariente
- * @version 1.0
+ * @version 1.1
  */
 public class Biblioteca {
 
@@ -19,6 +19,22 @@ public class Biblioteca {
      */
     public Biblioteca() {
         libros = new ArrayList<>();
+    }
+
+    /**
+     * Getter del Array list
+     * @return
+     */
+    public ArrayList<Libro> getLibros() {
+        return libros;
+    }
+
+    /**
+     * Setter del Array list
+     * @param libros
+     */
+    public void setLibros(ArrayList<Libro> libros) {
+        this.libros = libros;
     }
 
     /**
