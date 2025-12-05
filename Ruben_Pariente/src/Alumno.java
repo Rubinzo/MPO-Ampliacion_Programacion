@@ -12,11 +12,7 @@ private static final MyScanner sc = new MyScanner();
 
 
     public Alumno() {
-        this.nombre = nombre;
-        this.notaProgramacion = notaProgramacion;
-        this.notaBaseDatos = notaBaseDatos;
-        this.notaSistemasInformaticos = notaSistemasInformaticos;
-        this.notaMedia = notaMedia;
+
     }
 
     public String getNombre() {
