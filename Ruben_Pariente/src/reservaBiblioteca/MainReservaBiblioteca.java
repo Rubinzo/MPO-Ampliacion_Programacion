@@ -1,6 +1,8 @@
 package reservaBiblioteca;
 
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.Map;
     /*
     Alumno - Rubén Pariente
     DAW - Ampliacion de Programacion
@@ -11,6 +13,8 @@ public class MainReservaBiblioteca {
 
     private static final MyScanner sc = new MyScanner();
     private static ArrayList<Libro> libros = new ArrayList<>();
+    private static Map<Libro, Integer> inventario = new LinkedHashMap<>();
+
 
     public static void main(String[] args)  {
         menu();
@@ -32,6 +36,7 @@ public class MainReservaBiblioteca {
                     break;
 
                 case 3:
+                    gestionarEjemplares();
                     break;
                 case 4:
                     System.out.println("Saliendo...");
@@ -90,7 +95,25 @@ public class MainReservaBiblioteca {
     }
 
     public static void gestionarEjemplares() {
-        ArrayList<String> listaEjemplares = new ArrayList<>();
+        boolean correcto;
+        for (Libro libro: libros) {
+            int cantidad = 0;
+            do {
+                correcto = true;
+                try {
+                    System.out.println(libro.toString());
+                    cantidad = sc.pedirNumero("Introduce el cantidad del producto: ");
+                    if (cantidad < 0) {
+                        throw new CantidadInvalidaException("La cantidad en stock no puede ser negativa");
+                    }
+                } catch (CantidadInvalidaException e) {
+                    System.out.println(e.getMessage());
+                    correcto = false;
+                }
+            } while (!correcto);
+
+            inventario.put(libro, cantidad);
+        }
 
     }
 

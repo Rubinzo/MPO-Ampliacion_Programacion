@@ -71,6 +71,7 @@ public class Main {
             try{
                 System.out.println("Ingrese el código del producto que desea añadir: ");
                 codigo = sc.nextLine();
+                //Solo darle una vez el valor
                 codigo = validarCodigo(codigo);
                 correcto = true;
             }catch (CodigoInvalidoException e){
