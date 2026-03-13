@@ -102,7 +102,7 @@ public class MainReservaBiblioteca {
                 correcto = true;
                 try {
                     System.out.println(libro.toString());
-                    cantidad = sc.pedirNumero("Introduce el cantidad del producto: ");
+                    cantidad = sc.pedirNumero("Introduce el cantidad del libro: ");
                     if (cantidad < 0) {
                         throw new CantidadInvalidaException("La cantidad en stock no puede ser negativa");
                     }

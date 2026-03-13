@@ -1,3 +1,5 @@
+import recursos.MyScanner;
+
 public class ControlNotas {
 
     //Rubén Pariente DAW

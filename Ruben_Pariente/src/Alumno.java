@@ -1,3 +1,5 @@
+import recursos.MyScanner;
+
 public class Alumno {
 //Declarar variables sin inicializar
 private String nombre;
@@ -6,7 +8,7 @@ private double notaBaseDatos;
 private double notaSistemasInformaticos;
 private double notaMedia;
 
-//Instanciar la clase MyScanner
+//Instanciar la clase recursos.MyScanner
 private static final MyScanner sc = new MyScanner();
 //Constructor vacío para que el usuario introduzca los datos
 
